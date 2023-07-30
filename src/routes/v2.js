@@ -4,9 +4,10 @@ const express = require('express');
 const dataModules = require('../models');
 const bearerAuth = require('../auth/middleware/bearer');
 const acl = require('../auth/middleware/acl');
+
 const router = express.Router();
 
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBpZXJyZSIsImlhdCI6MTY5MDY0OTMxMH0.Oqp9P2-1Gw5_GeIrppcv-Z3NfddpWb8gv9lSOAet9oA
+
 
 router.param('model', (req, res, next) => {
   const modelName = req.params.model;
