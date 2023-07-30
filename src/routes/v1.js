@@ -2,6 +2,7 @@
 
 const express = require('express');
 const dataModules = require('../models');
+const {getUser} = require('../middleware/spotify');
 
 const router = express.Router();
 

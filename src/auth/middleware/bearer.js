@@ -12,6 +12,7 @@ module.exports = async (req, res, next) => {
     const validUser = await users.authenticateToken(token);
     req.user = validUser;
     req.token = validUser.token;
+    console.log('I am the bearer',req.user);
     next();
   } catch (e) {
     _authError();
